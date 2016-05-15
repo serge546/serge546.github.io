@@ -1,0 +1,142 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.clearfix:before,
+.clearfix:after {
+	display: table;
+	content: "";
+} 
+.clearfix:after { clear: both; }
+
+ul { margin: 0; padding: 0; list-style: none;}
+h1,h2,h3,h4,h5,h6,p { margin: 0; padding: 0;}
+a { color: #eee; text-decoration: none;}
+
+html, body { height: 100%; }
+
+body {
+	margin: 0;
+	font: 14px/16px Segoe UI, sans-serif;
+	color: #eee;
+	background: #555 url(../image/development.png) no-repeat center;
+	min-width: 960px;
+}
+
+.container {
+	margin: 0 auto;
+	width: 960px;
+}
+.table { display: table; height: 100%; }
+.layer { background: rgba(0,0,0,0.85); }
+.middle { display: table-cell; vertical-align:middle; padding: 36px 0; }
+.center { text-align: center; }
+
+/* *****Навигация***** */
+
+#top-panel { 
+	position: fixed;
+	z-index: 5;
+	width: 100%;
+	background: rgba(0,0,0,0.9);
+
+}
+
+#top-panel a { 
+	display: inline-block;
+	padding: 10px 25px;
+	text-transform: uppercase;
+}
+#top-panel a:hover,
+#top-panel a:active,
+#top-panel a.active {
+	color:#7685BD;
+}
+#top-panel ul { float: right; }
+#top-panel ul>li { float: left;}
+
+/* -----Контент----- */
+
+.content { 
+	display: none;
+	text-shadow: 1px 1px 2px #000;
+	padding: 20px;
+	background: rgba(0,0,0,0.9);
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+.content.active { 
+	display: block; 
+}
+
+.content h2 {
+	line-height:40px;
+	font-size: 40px;
+	font-weight: normal;
+	text-transform: uppercase;
+	padding: 0 15px 20px 15px;
+}
+
+.content p {
+	font-size: 18px;
+	line-height: 20px;
+	padding: 0 0 5px 0;
+}
+
+.content a,
+.content a:active {
+	color:#7685BD;
+}
+
+.content img {
+	float: left;
+	width: 200px;
+	margin: 0 20px 0 0;
+	border: 1px solid #ddd;
+	outline: 1px solid #000;
+}
+
+.content hr { margin: 20px 0; }
+
+.content input[type=text] {
+	width: 200px;
+	margin: 5px 10px 0 0;
+	padding: 5px;
+	border: 1px solid #ddd;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.content input[type=submit] {
+	margin: 5px 0 0 0;
+	width: 100px;
+	padding: 5px;
+	color: #eee;
+	background: #7685BD;
+	border: 2px solid #4761BD;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.content input[type=submit]:hover,
+.content input[type=submit]:active {
+	background: #4761BD;
+}
+
+/* *****Подвал***** */
+
+.empty { padding-bottom: 36px; }
+
+#footer { 
+	margin-top: -36px;
+	background: rgba(0,0,0,0.9);
+}
+.copyright { float: left; padding: 10px 25px;}

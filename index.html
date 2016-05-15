@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<title>Главная страница</title>
+</head>
+<body>
+	<div id="top-panel">
+		<div class="container clearfix">
+			<ul>
+				<li><a href="#home" class="active">Главная</a></li>
+				<li><a href="#puzzle">Загадки</a></li>
+				<li><a href="#guess">Угадайка</a></li>
+				<li><a href="#guess-mp">Угадайка-мультиплеер</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="container table">
+		<div class="middle">
+			<div id="home" class="content clearfix active">
+				<h2 class="center">Личная страничка студента</h2>
+				<img src="image/photo.jpg" alt="">
+				<p>Добрый день, меня зовут Сергей. Я начинающий программист (ну это громко сказано). </p>
+				<p>Мне нравится верстка, но нужно двигаться дальше - изучать языки программирования. И вот однажды я наткнулся на один ресурс - <a href="http://geekbrains.ru" target="_blank">Geekbrains.ru</a>. Эта страничка - одно из заданий, которые задавались на курсе "Основы программирования"..</p>
+			</div>
+			
+			<div id="puzzle" class="content clearfix">
+				<h2 class="center">Загадки</h2>
+				
+				<p>Каждому человеку два раза это дается бесплатно, а за третий раз надо платить большие деньги. Что это?</p>
+				<form action="#" class="center">
+					<input type="text" id="puzzle1" placeholder="Ваш ответ"> 
+					<input type="submit" value="Ответить" onClick="check('puzzle1','зубы')">
+				</form>
+				<hr>
+				
+				<p>В кафе встретились три друга: скульптор Белов, скрипач Чернов и художник Рыжов. </p>
+				<p>"Замечательно, что у одного из нас белые, у другого черные, а у третьего рыжие волосы, но ни у кого цвет волос не соответствует фамилии", - заметил черноволосый.</p>
+				<p>"Ты прав", - сказал Белов.</p>
+				<p>Какой цвет волос у художника?</p>
+				<form action="#" class="center">
+					<input type="text" id="puzzle2" placeholder="Ваш ответ">
+					<input type="submit" value="Ответить" onClick="check('puzzle2','черный')">
+				</form>
+			</div>
+			
+			<div id="guess" class="content clearfix">
+				<h2 class="center">Угадайка</h2>
+					<p>Это игра на угадывание числа. Правила:
+					<br>- компьютер загадывает случайное число от 1 до 100; 
+					<br>- попытки считаются; 
+					<br>- после каждой попытки дается подсказка, так что игра несложная.
+					<br>- для выхода нажать "Отмена" или ввести пустое поле; 					
+					<br>Вперед! </p>
+				<div class="center">
+					<input type="submit" value="Play" onClick="guess()">
+				</div>
+			</div>
+			
+			<div id="guess-mp" class="content clearfix">
+				<h2 class="center">Угадайка-мультиплеер</h2>
+				<p>Это игра на угадывание числа. Правила:
+				<br>- количество игроков от 2 до 4;
+				<br>- компьютер загадывает случайное число от 1 до 100; 
+				<br>- попытки считаются; 
+				<br>- после каждой попытки дается подсказка, так что игра несложная.
+				<br>- для выхода нажать "Отмена" или ввести пустое поле; 					
+				<br>Вперед! </p>
+				<div class="center">
+					<input type="submit" value="Play" onClick="guessMP()">
+				</div>
+			</div>
+		</div>
+		
+		<div class="empty"></div>
+	</div>
+	<div id="footer" class="clearfix"> 
+		<div class="container">
+			<span class="copyright">&#169; 2016. Типа копирайт.</span>
+		</div>
+	</div>
+
+</body>
+</html>
