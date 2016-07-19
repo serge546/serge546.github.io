@@ -72,6 +72,7 @@ body {
 	color: #eee;
 	background: url(../img/bg.png) no-repeat #555;
 	background-size: cover;
+	background-attachment: fixed;
 	height: 100%;
 }
 
@@ -79,16 +80,19 @@ body {
 /* ----- Навигация ----- */
 
 nav {
-	position: absolute;
+	position: fixed;
 	top: 0; 
 	left: 0;
+	z-index: 99;
 	width: 100%;
 	background: rgba(0,0,0,.9);
 	height: 50px;
+	border-bottom: 1px dashed #333;
 }
 
-nav ul { float: right; }
-nav ul li {	float: left; }
+nav ul { display: inline-block; }
+nav ul li { float: left; }
+
 nav a {
 	display: block;
 	line-height: 50px;
@@ -122,7 +126,7 @@ nav a:hover, nav a:active {
 	font-weight: normal;
 	text-transform: uppercase;
 }
-.work {
+.work, form {
 	background: rgba(255,255,255,.1);
 	padding: 20px;
 	border-radius: 5px;
@@ -153,10 +157,63 @@ nav a:hover, nav a:active {
 	color: #7685BD;
 }
 .work p {
+	display: none;
+	max-width: 300px;
 	margin-top: 20px;
 	font-weight: lighter;
 	line-height: 18px;
 }
+#contact>h2 { margin: 40px 0 10px 0; }
+.adr { color: #7685BD; }
+.adr:hover, .adr:active { text-decoration: underline; }
+
+
+/* ----- Форма ----- */
+
+input[type="text"], input[type="email"], textarea {
+	display: block;
+	width: 100%;
+	padding: 7px 10px;
+	font: inherit;
+	color: #000;
+	border: 1px solid #000;
+	border-radius: 4px;
+}
+input[type="text"], input[type="email"] {
+	margin-bottom: 20px;
+}
+textarea {
+	height: 145px;
+	line-height: 18px;
+	margin-bottom: 20px;
+	resize: none;
+}
+input[type="submit"] {
+	display: inline-block;
+	height: 33px;
+	width: 200px;
+	color: #fff;
+	background: #7685BD;
+	border: 2px solid #4761BD;
+	font: inherit;
+	border-radius: 4px;
+	cursor: pointer;
+	box-shadow: inset 0 0 10px 2px #4761BD;
+}
+input[type=submit]:hover, input[type=submit]:active {
+	background: #4761BD;
+}
+
+input::placeholder { color: #999; }
+textarea::placeholder { color: #999; }
+input::-moz-placeholder { color: #999; }
+textarea::-moz-placeholder { color: #999; }
+input::-webkit-input-placeholder { color: #999; }
+textarea::-webkit-input-placeholder { color: #999; }
+input:-ms-input-placeholder { color: #999; }
+textarea:-ms-input-placeholder { color: #999; }
+input::-ms-input-placeholder { color: #999; }
+textarea::-ms-input-placeholder { color: #999; }
 
 /* ----- Подвал ----- */
 
@@ -165,8 +222,9 @@ nav a:hover, nav a:active {
 footer {
 	margin-top: -50px;
 	background: rgba(0,0,0,.9);
-	height: 50px;
+	line-height: 50px;
 }
+
 
 /* ----- Grid ----- */
 
