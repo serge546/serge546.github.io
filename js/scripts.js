@@ -22,11 +22,11 @@ $(document).ready(function(){
 		});
 		e.preventDefault();
 		$(this).get(0).reset();
-		$('.submit-success').fadeToggle(400);
+		$('.submit-success').show();
 	});
   
 	$('.submit-success').click(function() {
-		$(this).hide();
+		$(this).hide(3000);
 	});
 	
 });
