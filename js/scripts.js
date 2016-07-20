@@ -22,7 +22,11 @@ $(document).ready(function(){
 		});
 		e.preventDefault();
 		$(this).get(0).reset();
-		$('.submit-success').show().fadeOut(5000);
+		$('.submit-success').show();
+		setTimeout(
+			function() {$('.submit-success').fadeOut(5000)}, 
+			5000
+			);
 	});
   
 	$('.submit-success').click(function() {
