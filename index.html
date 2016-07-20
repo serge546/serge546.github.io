@@ -5,8 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/style.css">
 	<title>Примеры работ | Страница верстальщика</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="js/scripts.js"></script>
 </head>
 <body>
 	<nav>
@@ -56,7 +54,7 @@
 								<li class="left"><a href="http://axioma25.ru"  target="_blank">сайт</a></li>
 								<li class="right more"><a href="#" >подробнее</a></li>
 							</ul>
-							<p class="center">Сайт на WordPress. Верстка без макета. Временно заморожен, многое не доработано, поэтому могут быть ошибки. Но некоторая работа была проделана, так что пусть тоже здесь будет :)</p>
+							<p class="center">Сайт на WordPress. Дизайн, верстка, скрипты были сделаны мной. Временно заморожен, многое не доработано, поэтому могут быть ошибки. Но некоторая работа была проделана, так что пусть тоже здесь будет :)</p>
 						</div>
 					</div>
 					
@@ -69,19 +67,18 @@
 				<form action="https://formspree.io/grymzinsergey@gmail.com" method="POST">
 					<div class="row">
 						<div class="col-sm-6">
-							<input type="text" required name="name" placeholder="Ваше имя">
-							<input type="email" required name="_replyto" placeholder="Ваш email">
+							<input type="text" required name="name" placeholder="Ваше имя*">
+							<input type="email" required name="_replyto" placeholder="Ваш email*">
 							<input type="text" name="subject" placeholder="Тема">
 						</div>
 						<div class="col-sm-6">
-							<textarea name="message" required placeholder="Сообщение"></textarea>
+							<textarea name="message" required placeholder="Сообщение*"></textarea>
 						</div>
 					</div>
 					<div class="text-center">
 						<input type="submit" value="Отправить">
 					</div>
 					
-					<input type="hidden" name="_next" value="index.html">
 					<input type="hidden" name="_subject" value="С моего сайта">
 					<input type="text" name="_gotcha" style="display:none">
 				</form>
@@ -91,12 +88,23 @@
 		<div class="empty"></div>
 	</div>
 	
+	
+	<div class="submit-success">
+		<div class="container">
+			<p class="text-center">Отправлено!</p>
+		</div>
+	</div>
+	
+	
 	<footer>
 		<div class="container text-center">
 			<span id="copyright">© 2016 Сергей Грымзин</span>
 		</div>
 	</footer>
 	
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
 </body>
 </html>
 

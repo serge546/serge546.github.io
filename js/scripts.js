@@ -13,4 +13,20 @@ $(document).ready(function(){
 		$('html:not(:animated),body:not(:animated)').animate({scrollTop: destination}, 500);
 	});
 	
+	$('form').submit(function(e) {
+		$.ajax({
+			method: 'POST',
+			url: '//formspree.io/grymzinsergey@gmail.com',
+			data: $('form').serialize(),
+			datatype: 'json'
+		});
+		e.preventDefault();
+		$(this).get(0).reset();
+		$('.submit-success').fadeToggle(400);
+	});
+  
+	$('.submit-success').click(function() {
+		$(this).hide();
+	});
+	
 });

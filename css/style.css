@@ -215,6 +215,21 @@ textarea:-ms-input-placeholder { color: #999; }
 input::-ms-input-placeholder { color: #999; }
 textarea::-ms-input-placeholder { color: #999; }
 
+.submit-success {
+	display: none;
+	position: fixed;
+	width: 100%;
+	top: 50px;
+	left: 0;
+	background: #41FF45;
+	color: #fff;
+	line-height: 50px;
+	text-transform: uppercase;
+	font-weight: bolder;
+	cursor: pointer;
+}
+
+
 /* ----- Подвал ----- */
 
 .empty { padding-bottom: 50px; }
