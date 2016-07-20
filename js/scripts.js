@@ -24,8 +24,8 @@ $(document).ready(function(){
 		$(this).get(0).reset();
 		$('.submit-success').show();
 		setTimeout(
-			function() {$('.submit-success').fadeOut(5000)}, 
-			5000
+			function() {$('.submit-success').fadeOut(3000)}, 
+			2000
 			);
 	});
   
